@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/flutter-framework-app.iml" filepath="$PROJECT_DIR$/.idea/flutter-framework-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/beowulf_web_2.iml" filepath="$PROJECT_DIR$/beowulf_web_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/beowulf_web_2_android.iml" filepath="$PROJECT_DIR$/android/beowulf_web_2_android.iml" />
     </modules>
   </component>
 </project>

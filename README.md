@@ -1,6 +1,6 @@
-# flutter_framework_app
+# beowulf_web_2
 
-A test Flutter Application
+A new Flutter project.
 
 ## Getting Started
 
