@@ -14,54 +14,43 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blueGrey,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Beowulf Platform Prototype'),
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text('Welcome to Beowulf'),
+          ),
+          body: Column(
+            children: [
+              titleSection,
+              textSection
+            ]
+    )
+    )
     );
   }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
+  Widget titleSection = Container(
+    padding: const EdgeInsets.all(32),
+    child: Row(
+      children: [
+        Container(
+          padding: const EdgeInsets.only(bottom: 8),
+          child: Text(
+            'Beowulf Platform Prototype',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
+          ),
+        )
+      ]
+    )
+  );
+
+  Widget textSection = Container(
+    padding: EdgeInsets.all(32),
+    child: Text(
+      'This is the description of the application and what it will do , '
+          'this application description is a long text description',
+      softWrap: true,
+    )
+  );
 }
+
